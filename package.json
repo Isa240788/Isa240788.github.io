@@ -8,7 +8,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "test:unit": "vitest"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -26,14 +27,28 @@
     "vue": "^3.5.25"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^6.0.2",
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^25.5.0",
+    "@vitejs/plugin-vue": "^6.0.5",
+    "@vitest/ui": "^4.1.0",
+    "@vue/test-utils": "^2.4.6",
     "autoprefixer": "^10.4.27",
+    "cypress": "^15.11.0",
     "daisyui": "^5.5.19",
+    "eslint": "^10.0.3",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-vue": "^10.8.0",
     "gh-pages": "^6.3.0",
+    "globals": "^17.4.0",
+    "jsdom": "^28.1.0",
     "postcss": "^8.5.8",
+    "prettier": "^3.8.1",
     "sass": "^1.97.3",
     "tailwindcss": "^4.2.1",
-    "vite": "^7.3.1"
+    "terser": "^5.46.0",
+    "vite": "^7.3.1",
+    "vite-plugin-vue-devtools": "^8.0.7",
+    "vitest": "^4.1.0"
   },
   "description": "Landing page profesional desarrollada con Vue 3 `(Composition API + <script setup>`, animaciones con AOS, diseño moderno con Tailwind CSS y arquitectura modular basada en componentes.",
   "main": "vite.config.js",

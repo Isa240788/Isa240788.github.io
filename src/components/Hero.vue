@@ -2,7 +2,7 @@
 <template>
   <section class="relative min-h-screen flex items-center overflow-hidden bg-[#0a0f1d]" id="inicio">
     
-    <!-- 🌌 EL CIELO DE ISABEL (Aurora WebGL) -->
+    <!-- 🌌 AURORA DE FONDO -->
     <div class="absolute inset-0 z-0">
       <Aurora 
         :colorStops="['#f43f5e', '#8b5cf6', '#f43f5e']" 
@@ -12,9 +12,10 @@
       />
     </div>
 
-    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 relative z-10 w-full pt-44 lg:pt-52 pb-20">
-      <div data-aos="fade-right" class="order-2 lg:order-1">
-        <!-- 👑 TEXTO EN BLANCO Y ROSA -->
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 relative z-10 w-full pt-32 lg:pt-0">
+      
+      <!-- 📝 COLUMNA IZQUIERDA: TEXTO -->
+      <div data-aos="fade-right" class="order-2 lg:order-1 flex flex-col justify-center">
         <h2 class="text-white font-black text-2xl md:text-4xl tracking-tighter uppercase italic opacity-90">
             HOLA, SOY
         </h2>
@@ -28,36 +29,35 @@
           "Desarrolladora Front-End en formación, especializada en interfaces modernas y optimizadas."
         </p>
         
-        <!-- 🔘 BOTONES ACTUALIZADOS -->
-        <div class="flex flex-wrap gap-6 mt-12">
-            <!-- 📧 BOTÓN CONTACTO (Lleva al id="contacto" en el footer) -->
-            <a 
-                href="#contacto" 
-                class="btn btn-primary btn-lg rounded-3xl px-12 font-black uppercase text-[10px] tracking-[0.2em] border-none shadow-[0_0_20px_rgba(244,63,94,0.3)] hover:shadow-[0_0_40px_rgba(244,63,94,0.6)] hover:scale-105 transition-all duration-500 group relative overflow-hidden"
-            >
-                <span class="absolute inset-0 bg-white/20 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></span>
-                <span class="relative flex items-center gap-2 text-white">
-                  Contáctame 📧
-                </span>
+        <!-- 🔘 BOTONES -->
+        <div class="flex flex-wrap items-center gap-4 mt-12">
+            <a href="#contacto" class="btn btn-primary btn-md md:btn-lg rounded-3xl px-8 font-black uppercase text-[10px] tracking-[0.2em] border-none shadow-lg hover:scale-105 transition-all">
+                Contáctame 📧
             </a>
 
-            <!-- 🚀 VER PROYECTOS -->
             <a 
-                href="#proyectos" 
-                class="btn btn-outline btn-lg rounded-3xl px-12 font-black uppercase text-[10px] tracking-[0.2em] border-white/20 text-white hover:bg-white/5 hover:border-white hover:scale-105 transition-all duration-500 group"
+                href="/cv-isabel-guajardo-frontend.pdf" 
+                download="/cv-isabel-guajardo-frontend.pdf" 
+                class="btn btn-outline btn-md rounded-3xl px-6 font-black uppercase text-[10px] tracking-[0.2em] border-pink-500/50 text-pink-400 hover:bg-pink-500 hover:text-white transition-all group"
             >
-                Ver Proyectos
-                <span class="group-hover:translate-x-2 transition-transform duration-300 ml-2">➜</span>
+                <ArrowDownTrayIcon class="w-4 h-4 mr-2 group-hover:animate-bounce" />
+                Descargar CV
+            </a>
+
+            <a href="#proyectos" class="text-white/40 hover:text-white text-[9px] font-black uppercase tracking-[0.3em] ml-2 transition-all">
+                Proyectos <span class="ml-2">➜</span>
             </a>
         </div>
       </div>
 
-      <!-- 👤 FOTO REDONDA -->
-      <div class="flex justify-center lg:justify-end order-1 lg:order-2" data-aos="zoom-in">
+      <!-- 👤 COLUMNA DERECHA: FOTO -->
+      <div class="flex justify-center lg:justify-end items-center order-1 lg:order-2" data-aos="zoom-in">
         <div class="relative group">
-            <div class="absolute -inset-2 bg-gradient-to-r from-primary to-rose-500 rounded-full blur opacity-20 group-hover:opacity-40 transition duration-700"></div>
+            <!-- Brillo de fondo -->
+            <div class="absolute -inset-2 bg-gradient-to-r from-pink-500 to-violet-600 rounded-full blur opacity-20 group-hover:opacity-40 transition duration-700"></div>
+            
             <div class="avatar">
-                <div class="w-64 md:w-80 rounded-full ring ring-primary ring-offset-base-100 ring-offset-4 shadow-2xl overflow-hidden bg-neutral">
+                <div class="w-64 md:w-80 rounded-full ring ring-pink-500 ring-offset-base-100 ring-offset-4 shadow-2xl overflow-hidden">
                     <img 
                       src="../assets/isa.jpg" 
                       alt="Isabel Guajardo" 
@@ -65,14 +65,17 @@
                     />
                 </div>
             </div>
+            
             <div class="absolute bottom-6 right-6 badge badge-primary p-3 border-none shadow-lg animate-pulse">
                 <span class="text-[8px] font-black uppercase tracking-widest text-white">Online</span>
             </div>
         </div>
       </div>
+
     </div>
   </section>
 </template>
+
 
 
 <script setup>

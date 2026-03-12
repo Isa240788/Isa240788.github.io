@@ -69,7 +69,7 @@
           <div class="flex flex-col items-center lg:items-end gap-3">
             <span class="text-[10px] font-black uppercase opacity-30 tracking-[0.4em] text-white">Social Connect</span>
             <div class="flex gap-6">
-              <a href="https://www.linkedin.com/in/isabel-guajardo-8847ab3b1/" target="_blank" class="text-white hover:text-pink-500 transition-all hover:-translate-y-1">
+              <a href="https://www.linkedin.com/in/isabel-guajardo-g/" target="_blank" class="text-white hover:text-pink-500 transition-all hover:-translate-y-1">
                 <FontAwesomeIcon :icon="['fab', 'linkedin']" class="text-3xl" />
               </a>
               <a href="https://github.com/Isa240788" target="_blank" class="text-white hover:text-pink-500 transition-all hover:-translate-y-1">
